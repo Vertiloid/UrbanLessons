@@ -1,5 +1,5 @@
 immutable_var = (12, 12.0, '12', [12, 12.0, '12'], False)
-print (immutable_var)
+print(immutable_var)
 
 # immutable_var[0] = 13
 # 'tuple' object does not support item assignment
