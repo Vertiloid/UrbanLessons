@@ -3,17 +3,17 @@ class WordsFinder:
         self.file_names = args
     def get_all_words(self):
         all_words = {}
-        for current_files in self.file_names:   #перебираем файлы
+        for current_files in self.file_names:   # перебираем файлы
             with open(current_files) as file:
                 content = file.read()
                 current_word = ''
                 list_words = []
-                for current_symbol in range(0, len(content)):    #перебираем содержимое файла
-                    #пробел, перенос строки или табуляция считается признаком конца слова
+                for current_symbol in range(0, len(content)):    # перебираем содержимое файла
+                    # пробел, перенос строки или табуляция считается признаком конца слова
                     if (content[current_symbol] == ' ' or content[current_symbol] == '\n' or
                             content[current_symbol] == '\t') and len(current_word) > 0:
-                        if current_word == '-': #если дефис обрамлёный пробелами или пробел за дефисом в начале файла
-                                                #избавляемся от дефиса
+                        if current_word == '-': # если дефис обрамлёный пробелами или пробел за дефисом в начале файла
+                                                # избавляемся от дефиса
                             current_word = ''
                         else:
                             list_words.append(current_word.lower())
@@ -23,7 +23,7 @@ class WordsFinder:
                                     content[current_symbol] == '=', content[current_symbol] == '!',
                                     content[current_symbol] == '?', content[current_symbol] == ';',
                                     content[current_symbol] == ':')):
-                            current_word += content[current_symbol]  #собираем слово по буквам
+                            current_word += content[current_symbol]  # собираем слово по буквам
             all_words[current_files] = list_words
         return all_words
     def find(self, word):
