@@ -24,7 +24,7 @@ class WordsFinder:
                                     content[current_symbol] == '?', content[current_symbol] == ';',
                                     content[current_symbol] == ':')):
                             current_word += content[current_symbol]  # собираем слово по буквам
-            all_words[current_files] = list_words    # добавляем пару ключ:значение - имя файла : список слов
+            all_words[current_files] = list_words    # добавляем пару ключ:значение - имя_файла : список_слов
         return all_words
     def find(self, word):
         output = {}
