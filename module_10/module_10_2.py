@@ -51,8 +51,8 @@ class Knight(Thread):
         print(f'{self.name} одержал победу спустя {self.get_right_endings(num_of_days, "days")}!')
 
 first_knight = Knight('Sir Lancelot', 10)
-second_knight = Knight("Sir Galahad", 20)
-my_knight = Knight('Sir Gawain,', 12)
+second_knight = Knight('Sir Galahad', 20)
+my_knight = Knight('Sir Gawain', 12)
 
 first_knight.start()
 second_knight.start()
